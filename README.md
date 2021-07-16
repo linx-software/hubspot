@@ -58,8 +58,8 @@ To write out all the submission on your instance of Hubspot for a form to a shee
 1. Generate the the access token.
 2. Create and share your googlesheet with the registered service account.
 3. Run the UpdateGoogleSheetsForFormGUID function.
-  *Pass the form GUID as parameter.
-  *Pass the GoogleSheetId as parameter.
+  * Pass the form GUID as parameter.
+  * Pass the GoogleSheetId as parameter.
 
 
 
