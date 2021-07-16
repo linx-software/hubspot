@@ -46,6 +46,14 @@ Automation of tasks on Hubspot such as creating forms, reading submissions of fo
 2. Create a googlesheet on your any of your gmail drive and share it with the email with editor's rights.
 
 ## Usage
+#### Export submission to googlesheet
+Retrieve all submissions from Hubspot for a particular form and write them to googlesheet.  This will allow Users without a Hubspot account to easily view the googlsheet. 
+
+To write out all the submission on your instance of Hubspot for a form to a sheet in googlesheet:
+
+Run the UpdateGoogleSheetsForFormGUID function.
+1. Pass the form GUID as parameter.
+2. Pass the GoogleSheetId as parameter.
 
 
 ## Contributing
