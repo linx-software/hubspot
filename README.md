@@ -77,7 +77,7 @@ This function writes the duplicates emails in a file in the directory: C:\Linx\H
 2. Run the GetDuplicateSubmissionsFilterEmail function.
    * Pass the form GUID as parameter.
 
-`If a file already exists with the same name then the data will get overwritten.`
+`If a file already exists with the same name then it will append the data in the file.`
 
 ## Contributing
 
