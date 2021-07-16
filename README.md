@@ -61,10 +61,19 @@ To write out all the submission on your instance of Hubspot for a form to a shee
   * Pass the GoogleSheetId as parameter.
 ---
 #### Find duplicate emails in submissions
-Very often, users submit duplicate forms and you need to cleanse them before any further use.  You may need to ensure that you are not sending a mail twice to the same user. We provide a list of submissions which have been deduplicate.
+Very often, users submit duplicate forms and you need to clean them before any further use.  This function writes the duplicates emails in a file in the directory: C:\Linx\Hubspot\DuplicateEmails.txt
 
-#### Read distinct submissions filter on email addresses
+1. Generate the the access token.
+2. Run the GetDuplicateSubmissionsFilterEmail function.
+   * Pass the form GUID as parameter.
 
+#### Filter distinct submissions by email addresses
+You need distinct submissions to be able to integrate with other 3rd party apps. This generic function returns a list of distinct submssions that can be easily used.
+This function writes the duplicates emails in a file in the directory: C:\Linx\Hubspot\Submissions.txt
+
+1. Generate the the access token.
+2. Run the GetDuplicateSubmissionsFilterEmail function.
+   * Pass the form GUID as parameter.
 
 ## Contributing
 
