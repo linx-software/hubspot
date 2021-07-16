@@ -1,7 +1,8 @@
 # Integration with Hubspot
 
 ## Description
-Automation of tasks on Hubspot such as creating forms, reading submissions of forms can be with Linx and API requests. This sample demonstrate automation of tasks related with forms on Hubspot and pushing submissions  to google sheets
+Automation of tasks on Hubspot such as creating forms, reading submissions of forms can be done with Linx and API requests. This sample demonstrate automation of tasks related with forms and submissions on Hubspot and pushing submissions to google sheets.  Reading of forms might be useful for an integration with an external system that has its own form-building interface. Submissions can be easily read for deduplicate, update or create contacts or integration with other third-part apps like Salesforce.
+
 #### Features:
 * Create forms.
 * Retrieve all forms details.
@@ -22,7 +23,7 @@ Automation of tasks on Hubspot such as creating forms, reading submissions of fo
 #### Google API Setup:
 
 1. Register as a developer on [Developer console](https://console.developers.google.com/)
-2. Register your Application/Project and Enable API scope [How to?](https://linx.software/docs/guides/googleapis/)
+2. Register your Application/Project and Enable API scope. [How to?](https://linx.software/docs/guides/googleapis/)
 3. Download Authorization Credentials
 4. Connect your Linx application
 
@@ -47,14 +48,19 @@ Automation of tasks on Hubspot such as creating forms, reading submissions of fo
 
 ## Usage
 
-#### Export submission to googlesheet
-Retrieves all submissions from Hubspot for a particular form and write them to googlesheet.  This will allow users without a Hubspot account to easily view the googlsheet. 
+
+
+#### Export submissions to googlesheet
+Retrieves all submissions from Hubspot for a particular form and write them to googlesheet.  This will allow users without a Hubspot account, to easily view the googldsheet. 
 
 To write out all the submission on your instance of Hubspot for a form to a sheet in googlesheet:
 
-Run the UpdateGoogleSheetsForFormGUID function.
-1. Pass the form GUID as parameter.
-2. Pass the GoogleSheetId as parameter.
+1. Generate the the access token.
+2. Create and share your googlesheet with the registered service account.
+3. Run the UpdateGoogleSheetsForFormGUID function.
+  *Pass the form GUID as parameter.
+  *Pass the GoogleSheetId as parameter.
+
 
 
 ## Contributing
