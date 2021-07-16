@@ -19,13 +19,20 @@ Automation of tasks on Hubspot such as creating forms, reading submissions of fo
 4. Copy your client_id.
 5. Copy your consumerSecret.
 
+#### Google API Setup:
+
+1. Register as a developer on [Developer console](https://console.developers.google.com/)
+2. Register your Application/Project and Enable API scope [How to?](https://linx.software/docs/guides/googleapis/)
+3. Download Authorization Credentials
+4. Connect your Linx application
+
 #### Configure the Solution's $.Settings:
-1. Install Linx Designer.
-2. Open the sample HubspotIntegration(.lsoz) in your Linx Designer.
-3. Edit the $.Settings values:
+1. Open the sample HubspotIntegration(.lsoz) in your Linx Designer.
+2. Edit the $.Settings values:
    * HubspotClientID: Your connected app’s **client_id**
    * HubspotConsumerSecret: Your connected app’s **Consumer Secret**
-4. Save the Solution.
+   * GoogleAuthCredentials : Copy paste the **Authorization Credentials** downloaded above.
+3. Save the Solution.
 
 #### Generate access tokens:
 1. Start the debugger on the RESTHost service in the Linx Designer.
@@ -33,15 +40,6 @@ Automation of tasks on Hubspot such as creating forms, reading submissions of fo
 3. You will be redirected to the Hubspot 2.0 access consent screen.
 4. Authorize the connected application.
 5. View success message.
- 
-#### Google API Setup:
-
-1. Register as a developer on [Developer console](https://console.developers.google.com/)
-2. Register your Application/Project and Enable API scope [How to?](https://linx.software/docs/guides/googleapis/)
-3. Download Authorization Credentials
-4. Connect your Linx application
-Configure the Solution's $.Settings:
-  * GoogleAuthCredentials : Copy paste the **Authorization Credentials** downloaded above.
 
 ## Usage
 
