@@ -3,6 +3,8 @@
 ## Description
 Automation of tasks on Hubspot such as creating forms, reading submissions of forms can be done with Linx and API requests. This sample demonstrate automation of tasks related with forms and submissions on Hubspot and pushing submissions to google sheets.  Reading of forms might be useful for an integration with an external system that has its own form-building interface. Submissions can be easily read for deduplicate, update or create contacts or integration with other third-part apps like Salesforce.
 
+The sample also contains some generically designed functions that connect and make requests to the Salesforce API. You can copy and use these functions in your own Linx Solution to integrate with other 3rd-party systems that can be accessible via API.
+
 #### Features:
 * Create forms.
 * Retrieve all forms details.
@@ -47,9 +49,6 @@ Automation of tasks on Hubspot such as creating forms, reading submissions of fo
 2. Create a googlesheet on your any of your gmail drive and share it with the email with editor's rights.
 
 ## Usage
-
-
-
 #### Export submissions to googlesheet
 Retrieves all submissions from Hubspot for a particular form and write them to googlesheet.  This will allow users without a Hubspot account, to easily view the googldsheet. 
 
@@ -60,6 +59,9 @@ To write out all the submission on your instance of Hubspot for a form to a shee
 3. Run the UpdateGoogleSheetsForFormGUID function.
   * Pass the form GUID as parameter.
   * Pass the GoogleSheetId as parameter.
+---
+#### Find duplicate and filter submissions to get distinct submissions based on email addresses
+Very often, users submit duplicate forms and you need to cleanse them before any further use.  You may need to ensure that you are not sending a mail twice to the same user. We provide a list of submissions which have been deduplicate.
 
 
 
