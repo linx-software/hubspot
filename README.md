@@ -60,9 +60,10 @@ To write out all the submission on your instance of Hubspot for a form to a shee
   * Pass the form GUID as parameter.
   * Pass the GoogleSheetId as parameter.
 ---
-#### Find duplicate and filter submissions to get distinct submissions based on email addresses
+#### Find duplicate emails in submissions
 Very often, users submit duplicate forms and you need to cleanse them before any further use.  You may need to ensure that you are not sending a mail twice to the same user. We provide a list of submissions which have been deduplicate.
 
+#### Read distinct submissions filter on email addresses
 
 
 ## Contributing
