@@ -46,7 +46,7 @@ The sample also contains some generically designed functions that connect and ma
 
 #### Create a google sheet and share with service account created
 1. Locate the client_email in the **Authorization Credentials** JSON file downloaded above and copy the email.
-2. Create a googlesheet on your any of your gmail drive and share it with the email with editor's rights.
+2. Create a googlesheet in your gmail drive and share it with the email with editor's rights.
 
 ## Usage
 #### Export submissions to googlesheet
