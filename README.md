@@ -50,7 +50,7 @@ The sample also contains some generically designed functions that connect and ma
 
 ## Usage
 #### Export submissions to googlesheet
-Retrieves all submissions from Hubspot for a particular form and write them to googlesheet.  This will allow users without a Hubspot account, to easily view the googldsheet. 
+Retrieves all submissions from Hubspot for a particular form and write them to googlesheet.   
 
 To write out all the submission on your instance of Hubspot for a form to a sheet in googlesheet:
 
