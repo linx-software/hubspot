@@ -57,8 +57,8 @@ To write out all the submission on your instance of Hubspot for a form to a shee
 1. Generate the the access token.
 2. Create and share your googlesheet with the registered service account.
 3. Run the UpdateGoogleSheetsForFormGUID function.
-  * Pass the form GUID as parameter.
-  * Pass the GoogleSheetId as parameter.
+    * Pass the form GUID as parameter.
+    * Pass the GoogleSheetId as parameter.
 ---
 #### Find duplicate emails in submissions
 Very often, users submit duplicate forms and you need to clean them before any further use.  This function writes the duplicates emails in a file in the directory: C:\Linx\Hubspot\DuplicateEmails.txt
