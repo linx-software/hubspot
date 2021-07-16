@@ -11,7 +11,7 @@ Automation of tasks on Hubspot such as creating forms, reading submissions of fo
 ## Installation
 
 #### Create a new connected app on Hubspot:
-1. Create a new test account on Hubspot.com or [Create a test account](https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account)
+1. Create a  [Create a new test account](https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account) on Hubspot.com or
 2. Enable the OAuth 2.0 settings. [How to?](https://developers.hubspot.com/docs/api/oauth-quickstart-guide)
    * Configure the Callback URL to be: http://localhost:8080/oauth/token
    * In the scope section, choose the following: **contacts social tickets forms**
