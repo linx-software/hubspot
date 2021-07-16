@@ -1,43 +1,69 @@
 # Integration with Hubspot
 
 ## Description
-Automation of tasks on Hubspot such as creating forms, reading submissions of forms can be with Linx and API requests. This sample demonstrate automation of tasks related with forms on Hubspot and pushing submissions  to google sheets
-Features:
+Automation of tasks on Hubspot such as creating forms, reading submissions of forms can be done with Linx and API requests. This sample demonstrate automation of tasks related with forms and submissions on Hubspot and pushing submissions to google sheets.  Reading of forms might be useful for an integration with an external system that has its own form-building interface. Submissions can be easily read for deduplicate, update or create contacts or integration with other third-part apps like Salesforce.
+
+The sample also contains some generically designed functions that connect and make requests to the Salesforce API. You can copy and use these functions in your own Linx Solution to integrate with other 3rd-party systems that can be accessible via API.
+
+#### Features:
 * Create forms.
+* Retrieve all forms details.
 * Reading of submissions in Hubspot.
 * Retrieving and writing out submissions to google sheets.
 * Find duplicate and filter submissions to get distinct submissions based on email addresses
 ## Installation
 
-https://developers.hubspot.com/docs/api/working-with-oauth
-https://developer.okta.com/blog/2018/04/10/oauth-authorization-code-grant-type
-https://knowledge.hubspot.com/forms/find-your-form-guid
-
-Create a new connected app on Salesforce:
-1. Create a new test account on Hubspot.com or (Create a test account)[https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account]
-2. Enable the OAuth 2.0 settings. 
-(How to) [https://developers.hubspot.com/docs/api/oauth-quickstart-guide]
-o Configure the Callback URL to be: http://localhost:8080/oauth/token
-o In the scope section, choose the following: **contacts social tickets forms**
+#### Create a new connected app on Hubspot:
+1. [Create a new test account](https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account) onÂ Hubspot.com
+2. [Enable the OAuth 2.0 settings](https://developers.hubspot.com/docs/api/oauth-quickstart-guide)
+   * Configure the Callback URL to be:Â http://localhost:8080/oauth/token
+   * In the scope section, choose the following: **contacts social tickets forms**
 3. Save your connected app.
-4. Copy your client_id.
+4. Copy yourÂ client_id.
 5. Copy your consumerSecret.
-Configure the Solution's $.Settings:
-1. Install Linx Designer. Download it here.
-2. Open the sample HubspotIntegration(.lsoz) in your Linx Designer.
-3. Edit the $.Settings values:
-o HubspotClientID: Your connected app’s client_id
-o HubspotConsumerSecret: Your connected app’s Consumer Secret
-4. Save the Solution.
-Generate access tokens:
+
+#### Google API Setup:
+
+1. Register as a developer on [Developer console](https://console.developers.google.com/)
+2. Register your Application/Project and Enable API scope. [How to?](https://linx.software/docs/guides/googleapis/)
+3. Download Authorization Credentials
+4. Connect your Linx application
+
+#### Configure the Solution's $.Settings:
+1. Open the sample HubspotIntegration(.lsoz) in your Linx Designer.
+2. Edit the $.Settings values:
+   * HubspotClientID: Your connected appâ€™sÂ **client_id**
+   * HubspotConsumerSecret: Your connected appâ€™sÂ **Consumer Secret**
+   * GoogleAuthCredentials : Copy paste the **Authorization Credentials** downloaded above.
+3. Save the Solution.
+
+#### Generate access tokens:
 1. Start the debugger on the RESTHost service in the Linx Designer.
-2. Make a request in your browser to http://localhost:8080/oauth/authorize
+2. Make a request in your browser toÂ http://localhost:8080/oauth/authorize
 3. You will be redirected to the Hubspot 2.0 access consent screen.
 4. Authorize the connected application.
 5. View success message.
- 
+
+#### Create a google sheet and share with service account created
+1. Locate the client_email in the **Authorization Credentials** JSON file downloaded above and copy the email.
+2. Create a googlesheet on your any of your gmail drive and share it with the email with editor's rights.
 
 ## Usage
+#### Export submissions to googlesheet
+Retrieves all submissions from Hubspot for a particular form and write them to googlesheet.  This will allow users without a Hubspot account, to easily view the googldsheet. 
+
+To write out all the submission on your instance of Hubspot for a form to a sheet in googlesheet:
+
+1. Generate the the access token.
+2. Create and share your googlesheet with the registered service account.
+3. Run the UpdateGoogleSheetsForFormGUID function.
+  * Pass the form GUID as parameter.
+  * Pass the GoogleSheetId as parameter.
+---
+#### Find duplicate emails in submissions
+Very often, users submit duplicate forms and you need to cleanse them before any further use.  You may need to ensure that you are not sending a mail twice to the same user. We provide a list of submissions which have been deduplicate.
+
+#### Read distinct submissions filter on email addresses
 
 
 ## Contributing
