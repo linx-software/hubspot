@@ -41,6 +41,10 @@ Automation of tasks on Hubspot such as creating forms, reading submissions of fo
 4. Authorize the connected application.
 5. View success message.
 
+#### Create a google sheet and share with service account created
+1. Locate the client_email in the **Authorization Credentials** JSON file downloaded above and copy the email.
+2. Create a googlesheet on your any of your gmail drive and share it with the email with editor's rights.
+
 ## Usage
 
 
