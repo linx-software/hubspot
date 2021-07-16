@@ -67,6 +67,8 @@ Very often, users submit duplicate forms and you need to clean them before any f
 2. Run the GetDuplicateSubmissionsFilterEmail function.
    * Pass the form GUID as parameter.
 
+`If a file already exists with the same name then the data will get overwritten.`
+
 #### Filter distinct submissions by email addresses
 You need distinct submissions to be able to integrate with other 3rd party apps. This generic function returns a list of distinct submssions that can be easily used.
 This function writes the duplicates emails in a file in the directory: C:\Linx\Hubspot\Submissions.txt
@@ -74,6 +76,8 @@ This function writes the duplicates emails in a file in the directory: C:\Linx\H
 1. Generate the the access token.
 2. Run the GetDuplicateSubmissionsFilterEmail function.
    * Pass the form GUID as parameter.
+
+`If a file already exists with the same name then the data will get overwritten.`
 
 ## Contributing
 
