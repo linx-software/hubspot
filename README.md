@@ -2,21 +2,15 @@
 
 ## Description
 Automation of tasks on Hubspot such as creating forms, reading submissions of forms can be with Linx and API requests. This sample demonstrate automation of tasks related with forms on Hubspot and pushing submissions  to google sheets
-Features:
+#### Features:
 * Create forms.
 * Reading of submissions in Hubspot.
 * Retrieving and writing out submissions to google sheets.
 * Find duplicate and filter submissions to get distinct submissions based on email addresses
 ## Installation
-
-https://developers.hubspot.com/docs/api/working-with-oauth
-https://developer.okta.com/blog/2018/04/10/oauth-authorization-code-grant-type
-https://knowledge.hubspot.com/forms/find-your-form-guid
-
 #### Create a new connected app on Hubspot:
 1. Create a new test account on Hubspot.com or (Create a test account)[https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account]
-2. Enable the OAuth 2.0 settings. 
-(How to) [https://developers.hubspot.com/docs/api/oauth-quickstart-guide]
+2. Enable the OAuth 2.0 settings. (How to) [https://developers.hubspot.com/docs/api/oauth-quickstart-guide]
 o Configure the Callback URL to be: http://localhost:8080/oauth/token
 o In the scope section, choose the following: **contacts social tickets forms**
 3. Save your connected app.
