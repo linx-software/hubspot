@@ -46,25 +46,38 @@ The sample also contains some generically designed functions that connect and ma
 
 #### Create a google sheet and share with service account created
 1. Locate the client_email in the **Authorization Credentials** JSON file downloaded above and copy the email.
-2. Create a googlesheet on your any of your gmail drive and share it with the email with editor's rights.
+2. Create a googlesheet in your gmail drive and share it with the email with editor's rights.
 
 ## Usage
 #### Export submissions to googlesheet
-Retrieves all submissions from Hubspot for a particular form and write them to googlesheet.  This will allow users without a Hubspot account, to easily view the googldsheet. 
+Retrieves all submissions from Hubspot for a particular form and write them to googlesheet.   
 
 To write out all the submission on your instance of Hubspot for a form to a sheet in googlesheet:
 
 1. Generate the the access token.
 2. Create and share your googlesheet with the registered service account.
 3. Run the UpdateGoogleSheetsForFormGUID function.
-  * Pass the form GUID as parameter.
-  * Pass the GoogleSheetId as parameter.
+    * Pass the form GUID as parameter.
+    * Pass the GoogleSheetId as parameter.
 ---
 #### Find duplicate emails in submissions
-Very often, users submit duplicate forms and you need to cleanse them before any further use.  You may need to ensure that you are not sending a mail twice to the same user. We provide a list of submissions which have been deduplicate.
+Very often, users submit duplicate forms and you need to clean them before any further use.  This function writes the duplicates emails in a file in the directory: C:\Linx\Hubspot\DuplicateEmails.txt
 
-#### Read distinct submissions filter on email addresses
+1. Generate the the access token.
+2. Run the GetDuplicateSubmissionsFilterEmail function.
+   * Pass the form GUID as parameter.
 
+`If a file already exists with the same name then the data will get overwritten.`
+
+#### Filter distinct submissions by email addresses
+You need distinct submissions to be able to integrate with other 3rd party apps. This generic function returns a list of distinct submssions that can be easily used.
+This function writes the duplicates emails in a file in the directory: C:\Linx\Hubspot\Submissions.txt
+
+1. Generate the the access token.
+2. Run the GetDuplicateSubmissionsFilterEmail function.
+   * Pass the form GUID as parameter.
+
+`If a file already exists with the same name then it will append the data in the file.`
 
 ## Contributing
 
